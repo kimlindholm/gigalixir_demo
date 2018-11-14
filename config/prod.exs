@@ -78,4 +78,4 @@ config :gigalixir_demo, GigalixirDemo.Repo,
   url: "${DATABASE_URL}",
   database: "",
   ssl: true,
-  pool_size: 2
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "2")
