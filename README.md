@@ -1,4 +1,14 @@
-# GigalixirDemo
+# Gigalixir Demo
+
+Deploying Phoenix 1.4 app to Gigalixir using Distillery 2.0
+
+## Requirements
+
+* Phoenix 1.4.0 or later
+* Elixir 1.7 or later
+* Erlang 21 or later
+
+## Installation
 
 To start your Phoenix server:
 
@@ -9,12 +19,10 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Deployment
 
-## Learn more
+See commit history for how to deploy to Gigalixir.
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+## License
+
+See [LICENSE](LICENSE).
