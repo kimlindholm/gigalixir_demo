@@ -37,7 +37,13 @@ end
 environment :prod do
   set include_erts: true
   set include_src: false
-  set cookie: :"o>QEIIC(lLV;afK,6!1z3!;w1bA>.QX)5I5,_C;C@?_.bbIIV{Bf2>6%0srzo6~7"
+  set cookie: :crypto.hash(
+      :sha256,
+      System.get_env("COOKIE") ||
+        :crypto.strong_rand_bytes(32) |> Base.encode64 |> binary_part(0, 32)
+    )
+    |> Base.encode16
+    |> String.to_atom
   set vm_args: "rel/vm.args"
 end
 
@@ -47,7 +53,7 @@ end
 # will be used by default
 
 release :gigalixir_demo do
-  set version: current_version(:gigalixir_demo)
+  set version: Mix.Project.config[:version]
   set applications: [
     :runtime_tools
   ]
