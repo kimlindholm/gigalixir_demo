@@ -14,7 +14,7 @@ config :gigalixir_demo, GigalixirDemoWeb.Endpoint,
   http: [port: {:system, "PORT"}],
   server: true,
   secret_key_base: "${SECRET_KEY_BASE}",
-  url: [host: "helpful-aquamarine-swift.gigalixirapp.com", port: 80],
+  url: [host: "${APP_NAME}.gigalixirapp.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
